@@ -5784,6 +5784,45 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga[] = {
     },
 };
 
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga2[] = {
+    {
+        .iv = 250,
+        .lvl = 41,
+        .species = SPECIES_MUK,
+        .moves = {MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_ACID_ARMOR, MOVE_TOXIC},
+    },
+    {
+        .iv = 250,
+        .lvl = 41,
+        .species = SPECIES_BEEDRILL,
+        .moves = {MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
+    },
+    {
+        .iv = 250,
+        .lvl = 43,
+        .species = SPECIES_TENTACRUEL,
+        .moves = {MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
+    },
+    {
+        .iv = 250,
+        .lvl = 43,
+        .species = SPECIES_CROBAT,
+        .moves = {MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_ACID_ARMOR, MOVE_TOXIC},
+    },
+    {
+        .iv = 250,
+        .lvl = 45,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
+    },
+    {
+        .iv = 250,
+        .lvl = 46,
+        .species = SPECIES_GENGAR,
+        .moves = {MOVE_TACKLE, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
+    },
+};
+
 static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina[] = {
     {
         .iv = 250,
@@ -5818,6 +5857,45 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina[] = {
     {
         .iv = 250,
         .lvl = 46,
+        .species = SPECIES_ALAKAZAM,
+        .moves = {MOVE_PSYCHIC, MOVE_RECOVER, MOVE_FUTURE_SIGHT, MOVE_CALM_MIND},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina2[] = {
+    {
+        .iv = 250,
+        .lvl = 37,
+        .species = SPECIES_JYNX,
+        .moves = {MOVE_PSYBEAM, MOVE_REFLECT, MOVE_FUTURE_SIGHT, MOVE_CALM_MIND},
+    },
+    {
+        .iv = 250,
+        .lvl = 38,
+        .species = SPECIES_GYRAFARIG,
+        .moves = {MOVE_BARRIER, MOVE_PSYBEAM, MOVE_BATON_PASS, MOVE_CALM_MIND},
+    },
+    {
+        .iv = 250,
+        .lvl = 39,
+        .species = SPECIES_SLOWKING,
+        .moves = {MOVE_PSYBEAM, MOVE_GUST, MOVE_LEECH_LIFE, MOVE_SUPERSONIC},
+    },
+    {
+        .iv = 250,
+        .lvl = 40,
+        .species = SPECIES_XATU,
+        .moves = {MOVE_PSYCHIC, MOVE_RECOVER, MOVE_FUTURE_SIGHT, MOVE_CALM_MIND},
+    },
+    {
+        .iv = 250,
+        .lvl = 41,
+        .species = SPECIES_GARDEVOIR,
+        .moves = {MOVE_PSYBEAM, MOVE_GUST, MOVE_LEECH_LIFE, MOVE_SUPERSONIC},
+    },
+    {
+        .iv = 250,
+        .lvl = 42,
         .species = SPECIES_ALAKAZAM,
         .moves = {MOVE_PSYCHIC, MOVE_RECOVER, MOVE_FUTURE_SIGHT, MOVE_CALM_MIND},
     },
