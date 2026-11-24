@@ -4163,7 +4163,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderGiovanni[] = {
         .iv = 250,
         .lvl = 55,
         .species = SPECIES_CLAYDOL,
-        .moves = {ANCIENT_POWER, MOVE_ICE_BEAM, MOVE_PSYCHIC, MOVE_EARTHQUAKE},
+        .moves = {MOVE_ANCIENT_POWER, MOVE_ICE_BEAM, MOVE_PSYCHIC, MOVE_EARTHQUAKE},
     },
     {
         .iv = 255,
@@ -5717,19 +5717,19 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika[] = {
         .iv = 250,
         .lvl = 32,
         .species = SPECIES_LUDICOLO,
-        .moves = {MOVE_SLEEP_FACADE, MOVE_SUNNY_DAY, MOVE_WATER_PULSE, MOVE_GIGA_DRAIN},
+        .moves = {MOVE_SOLAR_BEAM, MOVE_SUNNY_DAY, MOVE_WATER_PULSE, MOVE_GIGA_DRAIN},
     },
     {
         .iv = 250,
         .lvl = 33,
         .species = SPECIES_CACTURNE,
-        .moves = {MOVE_LEECH_SEED, MOVE_GRASS_WHISTLE, MOVE_FEINT_ATTACK, MOVE_GIGA_DRAIN},
+        .moves = {MOVE_LEECH_SEED, MOVE_GRASS_WHISTLE, MOVE_FAINT_ATTACK, MOVE_GIGA_DRAIN},
     },
     {
         .iv = 250,
         .lvl = 35,
         .species = SPECIES_VILEPLUME,
-        .moves = {MOVE_INGRAIN, MOVE_MOON_LIGHT, MOVE_POISON_POWDER, MOVE_GIGA_DRAIN},
+        .moves = {MOVE_INGRAIN, MOVE_MOONLIGHT, MOVE_POISON_POWDER, MOVE_GIGA_DRAIN},
     },
     {
         .iv = 250,
@@ -5833,7 +5833,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina[] = {
     {
         .iv = 250,
         .lvl = 41,
-        .species = SPECIES_GYRAFARIG,
+        .species = SPECIES_GIRAFARIG,
         .moves = {MOVE_PSYCHIC, MOVE_PSYBEAM, MOVE_BATON_PASS, MOVE_CALM_MIND},
     },
     {
@@ -5872,7 +5872,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina2[] = {
     {
         .iv = 250,
         .lvl = 38,
-        .species = SPECIES_GYRAFARIG,
+        .species = SPECIES_GIRAFARIG,
         .moves = {MOVE_BARRIER, MOVE_PSYBEAM, MOVE_BATON_PASS, MOVE_CALM_MIND},
     },
     {
