@@ -65,3 +65,14 @@ PalletTown_Text_OakYouEnjoyingTraveling::
     .string "Good for you, good for you.\n"
     .string "Hohoho.$"
 
+
+PalletTown_Text_MomScoutCamp::
+    .string "Hey!\n"
+    .string "I just found out that the kid next\l"
+    .string "door is signed up for a scout camp\l"
+    .string "in the JADE FOREST!\p"
+    .string "I signed you up too!\n"
+    .string "You'll get to make some friends and\l"
+    .string "learn how to become a POKéMON\l"
+    .string "TRAINER.\p"
+    .string "Kisses, sweetie!$"

@@ -10,6 +10,7 @@ PalletTown_OnTransition::
 	call_if_set FLAG_PALLET_LADY_NOT_BLOCKING_SIGN, PalletTown_EventScript_TryReadySignLady
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 0, PalletTown_EventScript_SetSignLadyPos
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1, PalletTown_EventScript_SetSignLadyDone
+	call_if_ne VAR_SCOUT_CAMP_STATE, 1, PalletTown_EventScript_HideMom
 	end
 
 PalletTown_EventScript_TryReadySignLady::
@@ -446,4 +447,140 @@ PalletTown_EventScript_SignLadyStartShowSign::
 	waitmovement 0
 	call PalletTown_EventScript_SignLadyShowSign
 	release
+	end
+
+
+
+
+
+
+
+PalletTown_EventScript_MomApproachLeft::
+	applymovement LOCALID_PALLET_TOWN_MOM, PalletTown_Movement_MomApproachLeft
+	waitmovement 0
+	return
+
+PalletTown_EventScript_MomApproachRight::
+	applymovement LOCALID_PALLET_TOWN_MOM, PalletTown_Movement_MomApproachRight
+	waitmovement 0
+	return
+
+PalletTown_EventScript_MomReturnLeft::
+	applymovement LOCALID_PALLET_TOWN_MOM, PalletTown_Movement_MomReturnLeft
+	waitmovement 0
+	return
+
+PalletTown_EventScript_MomReturnRight::
+	applymovement LOCALID_PALLET_TOWN_MOM, PalletTown_Movement_MomReturnRight
+	waitmovement 0
+	return
+
+
+
+
+
+
+
+PalletTown_EventScript_HideMom::
+	setflag FLAG_HIDE_PALLET_TOWN_MOM
+	return
+
+PalletTown_Movement_MomApproachLeft::
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+PalletTown_Movement_MomApproachRight::
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+PalletTown_Movement_MomReturnLeft::
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+PalletTown_Movement_MomReturnRight::
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+PalletTown_EventScript_MomScoutCampTriggerLeft::
+	setvar VAR_TEMP_1, 0
+	goto PalletTown_EventScript_MomScoutCampTrigger
+	end
+
+PalletTown_EventScript_MomScoutCampTriggerRight::
+	setvar VAR_TEMP_1, 1
+	goto PalletTown_EventScript_MomScoutCampTrigger
+	end
+
+PalletTown_EventScript_MomScoutCampTrigger::
+	lockall
+	textcolor NPC_TEXT_COLOR_FEMALE
+	clearflag FLAG_HIDE_PALLET_TOWN_MOM
+	addobject LOCALID_PALLET_TOWN_MOM
+	playse SE_EXIT
+	playse SE_PIN
+	applymovement LOCALID_PALLET_TOWN_MOM, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_PALLET_TOWN_MOM, Common_Movement_Delay48
+	waitmovement 0
+	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_MomApproachLeft
+	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_MomApproachRight
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox PalletTown_Text_MomScoutCamp, MSGBOX_DEFAULT
+	closemessage
+	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_MomReturnLeft
+	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_MomReturnRight
+	waitmovement 0
+	playse SE_EXIT
+	removeobject LOCALID_PALLET_TOWN_MOM
+	setflag FLAG_HIDE_PALLET_TOWN_MOM
+	setvar VAR_SCOUT_CAMP_STATE, 2
+	releaseall
 	end
